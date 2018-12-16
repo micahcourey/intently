@@ -8,7 +8,6 @@
     <mat-icon>person</mat-icon>
   </button>
   <mat-menu #menu="matMenu">
-    <button *ngIf="isAdmin" routerLink="/admin" mat-menu-item>Administration</button>
     <!-- <button mat-menu-item>Settings</button> -->
     <button (click)="logout()" mat-menu-item>Logout</button>
   </mat-menu>
@@ -27,7 +26,7 @@
 
     <mat-tab label="Monthly View">
       <ng-template matTabContent>
-        <matrix [tasks]="userTasks" [user]="user"></matrix>
+        <monthly-viewer [tasks]="userTasks" [user]="user"></monthly-viewer>
       </ng-template>
     </mat-tab>
 

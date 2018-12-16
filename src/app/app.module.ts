@@ -49,9 +49,7 @@ import { LoginPageComponent, ResetPasswordDialogComponent } from './login-page/l
 import { HomePageComponent } from './home-page/home-page.component';
 import { ActivityEditorComponent } from './home-page/activity-editor/activity-editor.component';
 import { GoalTrackerComponent, GoalDialogComponent } from './home-page/goal-tracker/goal-tracker.component';
-import { AdminPageComponent } from './admin-page/admin-page.component';
-import { MatrixComponent } from './home-page/matrix/matrix.component';
-import { LeaderboardComponent } from './home-page/leaderboard/leaderboard.component';
+import { MonthlyViewerComponent } from './home-page/monthly-viewer/monthly-viewer.component';
 import { SignupPageComponent } from './signup-page/signup-page.component'
 
 const routes: Routes = [ ];
@@ -65,9 +63,7 @@ const routes: Routes = [ ];
     GoalTrackerComponent,
     GoalDialogComponent,
     ResetPasswordDialogComponent,
-    AdminPageComponent,
-    MatrixComponent,
-    LeaderboardComponent,
+    MonthlyViewerComponent,
     SignupPageComponent
   ],
   imports: [

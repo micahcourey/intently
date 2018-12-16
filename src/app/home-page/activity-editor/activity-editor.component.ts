@@ -170,7 +170,7 @@ export class ActivityEditorComponent implements OnInit {
 
   openSnackBar(message: string, action: string) {
     this.snackBar.open(message, action, {
-      duration: 2000,
+      duration: 4000,
     })
   }
 
@@ -187,10 +187,44 @@ export class ActivityEditorComponent implements OnInit {
 
   getEncouragingMessages() {
     return [
-      "Wow you're really getting a lot done!",
-      "Keep on crushing it!",
-      "Another day another dollar.",
-      "Great job, keep it up!"
+      '“The little things? The little moments? They aren’t little.” – Jon Kabat-Zinn',
+      '“Wherever you go, there you are.” – Jon Kabat-Zinn',
+      '“Mindfulness is a way of befriending ourselves and our experience.” – Jon Kabat-Zinn',
+      '“The best way to capture moments is to pay attention. This is how we cultivate mindfulness.” – Jon Kabat-Zinn',
+      '“Mindfulness means being awake. It means knowing what you are doing.” – Jon Kabat-Zinn',
+      '“To think in terms of either pessimism or optimism oversimplifies the truth. The problem is to see reality as it is.” – Thích Nhất Hạnh',
+      '“Many people are alive but don’t touch the miracle of being alive.” – Thích Nhất Hạnh',
+      '“The present moment is the only time over which we have dominion.” – Thích Nhất Hạnh',
+      '“Live the actual moment. Only this actual moment is life.” – Thích Nhất Hạnh',
+      '“The feeling that any task is a nuisance will soon disappear if it is done in mindfulness.” – Thích Nhất Hạnh',
+      '“When we get too caught up in the busyness of the world, we lose connection with one another – and ourselves.” – Jack Kornfield',
+      '“Wisdom says we are nothing. Love says we are everything. Between these two our life flows.” – Jack Kornfield',
+      '“The things that matter most in our lives are not fantastic or grand. They are moments when we touch one another.” – Jack Kornfield',
+      '“Much of spiritual life is self-acceptance, maybe all of it.” – Jack Kornfield',
+      '“Fear is a natural reaction to moving closer to the truth.” – Pema Chödrön',
+      '“Nothing ever goes away until it has taught us what we need to know.” – Pema Chödrön',
+      '“The essence of bravery is being without self-deception.” – Pema Chödrön',
+      '“Rejoicing in ordinary things is not sentimental or trite. It actually takes guts.” – Pema Chödrön',
+      '“Mindfulness isn’t difficult, we just need to remember to do it.” – Sharon Salzberg',
+      '“That’s life: starting over, one breath at a time.” – Sharon Salzberg',
+      '“You cannot control the results, only your actions.” – Allan Lokos',
+      '“Don’t believe everything you think. Thoughts are just that – thoughts.” – Allan Lokos',
+      '“Your actions are your only true belongings.” – Allan Lokos',
+      '“What would it be like if I could accept life – accept this moment – exactly as it is?” – Tara Brach',
+      '“If you want to conquer the anxiety of life, live in the moment, live in the breath.” – Amit Ray',
+      '“Looking at beauty in the world, is the first step of purifying the mind.” – Amit Ray',
+      '“A few simple tips for life: feet on the ground, head to the skies, heart open…quiet mind.” – Rasheed Ogunlaru',
+      '“You only lose what you cling to.” – Buddha',
+      '“Peace comes from within. Do not seek it without.” – Buddha',
+      '“Three things can not hide for long: the Moon, the Sun and the Truth.” – Buddha',
+      '“Nothing can harm you as much as your own thoughts unguarded.” – Buddha',
+      '“Attachment leads to suffering.” – Buddha',
+      '“Nothing is forever except change.” – Buddha',
+      '“Just as a snake sheds its skin, we must shed our past over and over again.” – Buddha',
+      '“With our thoughts we make the world.” – Buddha',
+      '“Be where you are, otherwise you will miss your life.” – Buddha',
+      '“Do not dwell in the past, do not dream of the future, concentrate the mind on the present moment.” – Buddha',
+      '“If you are facing in the right direction, all you need to do is keep on walking.” – Buddha',
     ]
   }
 
