@@ -1,0 +1,47 @@
+<mat-toolbar class="nav-bar" color="primary">
+  <span class="home-logo" routerLink="/home">
+    <object type="image/svg+xml" data="assets/intently.svg" class="logo"></object> Intently
+  </span>
+  <span class="spacer"></span>
+  <button mat-button class="user-menu" [matMenuTriggerFor]="menu">
+    {{user.email}}
+    <mat-icon>person</mat-icon>
+  </button>
+  <mat-menu #menu="matMenu">
+    <button *ngIf="isAdmin" routerLink="/admin" mat-menu-item>Administration</button>
+    <!-- <button mat-menu-item>Settings</button> -->
+    <button (click)="logout()" mat-menu-item>Logout</button>
+  </mat-menu>
+</mat-toolbar>
+
+<section class="main-container">
+  <mat-tab-group class="tabs">
+
+    <mat-tab label="Intentions & Goals">
+      <div class="tab-body">
+        <activity-editor *ngIf="user && userTasks" (update)="getTasks()" [user]="user" [userTasks]="userTasks"></activity-editor>
+        <mat-divider class="divider" [vertical]="true"></mat-divider>
+        <goal-tracker *ngIf="user && userGoals" (update)="getGoals()" [user]="user" [userGoals]="userGoals"></goal-tracker>
+      </div>
+    </mat-tab>
+
+    <mat-tab label="Monthly View">
+      <ng-template matTabContent>
+        <matrix [tasks]="userTasks" [user]="user"></matrix>
+      </ng-template>
+    </mat-tab>
+
+    <!-- <mat-tab label="Statistics">
+      <ng-template matTabContent>
+        <h1>Coming soon...</h1>
+      </ng-template>
+    </mat-tab>
+
+    <mat-tab label="Calendar">
+      <ng-template matTabContent>
+        <h1>Coming soon...</h1>
+      </ng-template>
+    </mat-tab> -->
+
+  </mat-tab-group>
+</section>

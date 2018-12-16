@@ -1,0 +1,32 @@
+<mat-toolbar class="nav-bar" color="primary">
+  <span class="home-logo" routerLink="/home">
+    <object type="image/svg+xml" data="assets/intently.svg" class="logo"></object> Intently
+  </span>
+  <span class="spacer"></span>
+  <a class="signup-link" routerLink="/">Login</a>
+</mat-toolbar>
+<main class="login" *ngIf="signupForm">
+  <!-- <h1>Daily Matrix</h1> -->
+  <div class="login-card">
+    <mat-card>
+      <mat-card-title>Sign Up</mat-card-title>
+      <div>
+        <form class="login-container" [formGroup]="signupForm">
+          <!-- <mat-form-field>
+            <input  formControlName="name" type="text" matInput placeholder="Name">
+          </mat-form-field> -->
+          <mat-form-field>
+            <input  formControlName="email" type="email" matInput placeholder="Email">
+          </mat-form-field>
+          <mat-form-field>
+            <input formControlName="password" type="password" matInput placeholder="Password">
+          </mat-form-field>
+          <button mat-raised-button color="primary" (click)="tryRegister()">Sign Up</button>
+        </form>
+      </div>
+      <!-- <div class="social-signup">
+        <button mat-raised-button color="primary" (click)="tryRegister()">Signup with Google</button>
+      </div> -->
+    </mat-card>
+  </div>
+</main>

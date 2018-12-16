@@ -1,0 +1,79 @@
+<div class="editor-container">
+  <div class="activity-header">
+    <h1>Daily Intentions</h1>
+    <mat-form-field class="date-picker" [formGroup]="todayForm">
+      <input matInput [matDatepicker]="picker" formControlName="date">
+      <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+      <mat-datepicker #picker></mat-datepicker>
+    </mat-form-field>
+  </div>
+
+  <div class="day-card">
+    <mat-card>
+      <div class="card-header">
+        <mat-card-title class="card-title">Yesterdays Intentions</mat-card-title>
+        <mat-card-subtitle class="card-subtitle">{{yesterday | date:'fullDate'}}</mat-card-subtitle>
+      </div>
+      <mat-divider></mat-divider>
+      <mat-card-content class="card-content" *ngIf="yesterdaysTask">
+        {{yesterdaysTask.body}}
+      </mat-card-content>
+      <mat-card-content class="card-content" *ngIf="!yesterdaysTask">
+        <p>No Intentions were set on this date.</p>
+        <mat-icon>sentiment_very_dissatisfied</mat-icon>
+      </mat-card-content>   
+    </mat-card>
+  </div>
+  <div class="day-card">
+    <mat-card>
+      <div class="card-header">
+        <mat-card-title class="card-title">Intentions for Today</mat-card-title>
+        <mat-card-subtitle class="card-subtitle">{{today | date:'fullDate'}}</mat-card-subtitle>
+      </div>
+      <mat-divider></mat-divider>
+      <form class="task-form">
+        <mat-form-field *ngIf="showForms" class="card-content" [formGroup]="todayForm">
+          <textarea matInput name="body" formControlName="body" placeholder="What are your intentions for today?"
+            cdkTextareaAutosize #autosize="cdkTextareaAutosize" cdkAutosizeMinRows="3" cdkAutosizeMaxRows="10">
+          </textarea>
+          <div class="form-error" *ngIf="todayError">
+            Your intention must be at least 3 characters in length.
+          </div>
+        </mat-form-field>
+        <mat-card-content class="card-content" *ngIf="todaysTask && !showForms">
+          {{todaysTask.body}}
+        </mat-card-content>
+        <mat-card-content class="card-content" *ngIf="!todaysTask && !showForms">
+          <p>No Activities logged on this date.</p>
+          <mat-icon>sentiment_very_dissatisfied</mat-icon>
+        </mat-card-content> 
+      </form>
+    </mat-card>
+  </div>
+  <div class="day-card">
+    <mat-card>
+      <div class="card-header">
+        <mat-card-title class="card-title">Intentions for Tomorrow</mat-card-title>
+        <mat-card-subtitle class="card-subtitle">{{tomorrow | date:'fullDate'}}</mat-card-subtitle>
+      </div>
+      <mat-divider></mat-divider>
+      <form class="task-form">
+        <mat-form-field *ngIf="showForms" class="card-content" [formGroup]="tomorrowForm">
+          <textarea matInput name="body" minRow="5" formControlName="body" placeholder="What are your intentions for tomorrow?"
+            cdkTextareaAutosize #autosize="cdkTextareaAutosize" cdkAutosizeMinRows="3" cdkAutosizeMaxRows="10">
+          </textarea>
+        </mat-form-field>
+        <div class="form-error" *ngIf="tomorrowError">
+          Your intention must be at least 3 characters in length.
+        </div>
+        <mat-card-content class="card-content" *ngIf="tomorrowsTask && !showForms">
+          {{tomorrowsTask.body}}
+        </mat-card-content>
+        <mat-card-content class="card-content" *ngIf="!tomorrowsTask && !showForms">
+          <p>No intentions logged on this date.</p>
+          <mat-icon>sentiment_very_dissatisfied</mat-icon>
+        </mat-card-content> 
+      </form>
+    </mat-card>
+  </div>
+</div>

@@ -1,0 +1,52 @@
+.goals-container {
+  margin-top: 1rem;
+}
+.goals-header {
+  height: 44px;
+}
+.goals-header > h1 {
+  margin: 0;
+}
+.goal-panel {
+  width: calc(50vw - 2rem);
+}
+.goal-card {
+  width: 100%;
+}
+.panel-header {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.header-description {
+  flex-grow: 0;
+}
+.list-item {
+  display: flex;
+  align-items: center;
+}
+.goal-actions {
+  display: flex;
+  width: 100%;
+}
+.goal-actions > button {
+  min-width: 50px;
+  height: 46px;
+  padding: 0;
+}
+.edit-button {
+  margin-right: 1rem;
+}
+.goal-input {
+  flex-grow: 1;
+}
+
+@media(max-width: 850px) {
+  .goal-panel {
+    width: 100%;
+  }
+  .goals-container {
+    margin: 0 0.75rem 1rem 0.75rem;
+  }
+}

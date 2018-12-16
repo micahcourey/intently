@@ -1,0 +1,10 @@
+<h1 mat-dialog-title>New Q{{data.quarter}}, {{data.quarter_year}} Goal</h1>
+<div mat-dialog-content>
+  <mat-form-field style="width: 100%">
+    <textarea matInput name="goal" [(ngModel)]="data.body" placeholder="What's your new goal?"></textarea>
+  </mat-form-field>
+</div>
+<div style="justify-content: flex-end" mat-dialog-actions>
+  <button mat-button [mat-dialog-close]="false">Cancel</button>
+  <button mat-button color="accent" [mat-dialog-close]="data" cdkFocusInitial>Save</button>
+</div>

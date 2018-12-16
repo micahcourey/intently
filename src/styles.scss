@@ -1,0 +1,38 @@
+/* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css?family=Lato:400,700');
+
+body {
+  font-family: Roboto, Arial, sans-serif;
+  margin: 0;
+  background: rgb(250, 250, 250);
+  width: 100vw;
+  height: 100vh;
+}
+.mat-tab-body-wrapper {
+  height: 100%;
+}
+.cdk-overlay-connected-position-bounding-box {
+  align-items: flex-end !important;
+}
+h1, h2, h3, .home-logo {
+  font-family: 'Lato', sans-serif;
+  font-weight: 700;
+  -webkit-font-smoothing: antialiased;
+}
+.nav-bar {
+  height: 50px;
+}
+.spacer {
+  flex: 1 1 auto;
+}
+.home-logo {
+  font-size: 24px;
+  display: flex;
+  align-items: center;
+  width: 112px;
+  justify-content: space-between;
+}
+.logo {
+  height: 22px;
+  width: 22px;
+}

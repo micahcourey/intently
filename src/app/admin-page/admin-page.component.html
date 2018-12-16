@@ -1,0 +1,49 @@
+<mat-toolbar class="nav-bar" color="primary">
+  <span routerLink="/home">Intently</span>
+  <span class="spacer"></span>
+  <button mat-button [matMenuTriggerFor]="menu">
+    <mat-icon>person</mat-icon>
+    {{user.username}}
+  </button>
+  <mat-menu #menu="matMenu">
+    <button routerLink="/admin" mat-menu-item>Administration</button>
+    <button mat-menu-item>Settings</button>
+    <button (click)="logout()" mat-menu-item>Logout</button>
+  </mat-menu>
+</mat-toolbar>
+
+<div class="admin-container">
+  <div class="user-list-card">
+    <mat-card>
+      <mat-card-title>Registered Users</mat-card-title>
+      <h4>List coming soon...</h4>
+    </mat-card>
+  </div>
+  <mat-divider class="divider" [vertical]="true"></mat-divider>
+  <div class="user-form-card">
+    <mat-card *ngIf="userForm">
+      <mat-card-title>Register User Form</mat-card-title>
+      <div>
+        <form class="user-form-container" [formGroup]="userForm">
+          <mat-form-field>
+            <input formControlName="email" type="text" matInput placeholder="Email">
+          </mat-form-field>
+          <mat-form-field>
+            <input  formControlName="username" type="text" matInput placeholder="Username">
+          </mat-form-field>
+          <mat-form-field>
+            <input autocomplete="new-password" formControlName="password" type="password" matInput placeholder="Password">
+          </mat-form-field>
+          <mat-form-field>
+            <mat-select formControlName="realm" placeholder="User Level">
+              <mat-option [value]="'user'">User</mat-option>
+              <mat-option [value]="'admin'">Administrator</mat-option>
+            </mat-select>
+          </mat-form-field>
+          <button mat-raised-button color="primary" [disabled]="!userForm.valid" (click)="registerUser()">Register User</button>
+        </form>
+      </div>
+    </mat-card>
+  </div>
+
+</div>

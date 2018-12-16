@@ -1,0 +1,49 @@
+<div class="goals-container">
+  <div class="goals-header">
+    <h1 class="goal-list-header">Long-Term Goals</h1>
+  </div>
+  <mat-accordion *ngIf="quarters">
+    <mat-expansion-panel class="goal-panel" *ngFor="let quarter of quarters; let i = index"
+      [expanded]="step === i" (opened)="setStep(i)" hideToggle>
+      <mat-expansion-panel-header>
+        <div class="panel-header">
+          <mat-panel-title>
+            Q{{quarter.quarter}}, {{quarter.year}} 
+          </mat-panel-title>
+          <mat-panel-description class="header-description">
+            {{quarter.goals.length}} Goals set for Q{{quarter.quarter}}
+          </mat-panel-description>
+        </div>
+      </mat-expansion-panel-header>
+      <mat-selection-list *ngIf="!editMode" #goals>
+        <div *ngIf="!quarter.goals.length">
+          <p>You haven't set any goals for this quarter yet.</p>
+          <mat-icon>sentiment_very_dissatisfied</mat-icon>
+        </div>
+        <div class="list-item" *ngFor="let goal of quarter.goals">
+          <mat-list-option [value]="goal.active" (click)="updateGoalStatus(goal)" [checkboxPosition]="'before'" [selected]="!goal.active">
+            {{goal.body}}
+          </mat-list-option>
+        </div>
+      </mat-selection-list>
+      <div *ngIf="editMode && goalForm">
+        <div class="goal-actions" *ngFor="let goal of quarter.goals">
+          <mat-form-field [formGroup]="goalForm" class="goal-input">
+            <input matInput [formControlName]="goal.id">
+          </mat-form-field>
+          <button mat-button color="warn" (click)="deleteGoal(goal.id)"><mat-icon>delete</mat-icon></button>
+        </div>
+      </div>
+      <mat-action-row>
+        <span *ngIf="!editMode">
+          <button mat-raised-button *ngIf="quarter.goals.length" class="edit-button" (click)="editGoals()">Edit Goals</button>
+          <button mat-raised-button color="primary" (click)="openDialog(quarter)">Add Goal</button>
+        </span>
+        <span *ngIf="editMode">
+          <button mat-raised-button class="edit-button" (click)="editMode = false">Cancel</button>
+          <button mat-raised-button color="accent" (click)="saveGoals()">Save</button>
+        </span>
+      </mat-action-row>
+    </mat-expansion-panel>
+  </mat-accordion>
+</div>

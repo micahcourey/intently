@@ -1,0 +1,33 @@
+
+.main-container {
+  width: 100vw;
+  height: calc(100vh - 50px);
+}
+.tabs {
+  width: 100%;
+  height: 100%;
+}
+.tab-body {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  height: 100%;
+}
+.divider {
+  margin: 0 1rem;
+}
+.home-logo {
+  cursor: pointer;
+}
+.user-menu {
+  padding: 0;
+}
+
+@media(max-width: 850px) {
+  main {
+    padding: 0 1rem;
+  }
+  .divider {
+    display: none;
+  }
+}

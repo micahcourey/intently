@@ -1,0 +1,16 @@
+.leaderboard-container {
+  height: 100%;
+  margin: 0 1rem;
+  display: flex;
+  justify-content: space-between;
+}
+.table-container, .stats-container {
+  margin-top: 1rem;
+  width: calc(50vw - 2rem)
+}
+.leaderboard-table {
+  width: 100%;
+}
+.divider {
+  margin: 0 1rem;
+}
