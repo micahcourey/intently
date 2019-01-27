@@ -59,7 +59,11 @@ main {
 }
 .about {
   margin-right: 2rem;
-  max-width: 400px;
+  max-width: 500px;
+}
+.about:nth-child(even) {
+  margin-left: 2rem;
+  margin-right: 0;
 }
 .about-item {
   margin-bottom: 2.4rem;
