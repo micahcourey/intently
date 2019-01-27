@@ -9,24 +9,45 @@
   <!-- <h1>Daily Matrix</h1> -->
   <div class="login-card">
     <mat-card>
-      <mat-card-title>Sign Up</mat-card-title>
-      <div>
-        <form class="login-container" [formGroup]="signupForm">
-          <!-- <mat-form-field>
-            <input  formControlName="name" type="text" matInput placeholder="Name">
-          </mat-form-field> -->
-          <mat-form-field>
-            <input  formControlName="email" type="email" matInput placeholder="Email">
-          </mat-form-field>
-          <mat-form-field>
-            <input formControlName="password" type="password" matInput placeholder="Password">
-          </mat-form-field>
-          <button mat-raised-button color="primary" (click)="tryRegister()">Sign Up</button>
-        </form>
+      <div class="card-container">
+        <mat-card-title>Sign Up for Intently</mat-card-title>
+        <div class="form-container">
+          <form class="login-container" [formGroup]="signupForm">
+            <!-- <mat-form-field>
+              <input  formControlName="name" type="text" matInput placeholder="Name">
+            </mat-form-field> -->
+            <mat-form-field>
+              <input  formControlName="email" type="email" matInput placeholder="Email">
+            </mat-form-field>
+            <mat-form-field>
+              <input formControlName="password" type="password" matInput placeholder="Password">
+            </mat-form-field>
+            <button mat-raised-button color="primary" (click)="tryRegister()">Sign Up</button>
+          </form>
+        </div>
       </div>
       <!-- <div class="social-signup">
         <button mat-raised-button color="primary" (click)="tryRegister()">Signup with Google</button>
       </div> -->
     </mat-card>
+  </div>
+  <div class="promo">
+    <div class="about">
+      <div class="about-item">
+        <h2>Set Daily Intentions</h2>
+        <p>Intently assists you in living each and every day it the fullest of your intent.</p>
+      </div>
+      <div class="about-item">
+        <h2>Encouraging Messages</h2>
+        <p>Set your daily intentions and receive an encouraging message to help keep you on track with your goals.</p>
+      </div>
+      <div class="about-item">
+        <h2>Review Your Progress</h2>
+        <p>Review your intentions by viewing the calendar list. The calendar allows you to easily review your entire month as well as previeous months.</p>
+      </div>
+    </div>
+    <div class="crop-box">
+      <img src="https://s3-us-west-2.amazonaws.com/intently/intently_iphone1.png" alt="Intently app preview on iPhone">
+    </div>
   </div>
 </main>

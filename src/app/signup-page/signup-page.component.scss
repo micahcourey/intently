@@ -1,18 +1,24 @@
 main {
   width: 100vw;
-  height: calc(100vh - 50px);
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
+  background-color: #fff;
 }
 .login-card {
-  margin-top: 2rem;
+  margin-top: 4rem;
   width: 500px;
 }
 .login-container {
   display: flex;
   flex-direction: column;
+}
+.card-container {
+  padding: 1rem;
+}
+.form-container {
+  margin: 1rem 0;
 }
 .form-error {
   display: block;
@@ -35,8 +41,46 @@ main {
   text-decoration: none;
 }
 
+.promo {
+  display: flex;
+  justify-content: center;
+  margin: 4rem 1rem;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.crop-box {
+  display: inline-block;
+  height: 602px;
+  width: 300px;
+  overflow: hidden;
+}
+.crop-box > img {
+  width: 100%;
+}
+.about {
+  margin-right: 2rem;
+  max-width: 400px;
+}
+.about-item {
+  margin-bottom: 2.4rem;
+}
+.about-item > h2 {
+  font-size: 1.7rem;
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+.about-item > p {
+  font-size: 1.1rem;
+  line-height: 1.5;
+  margin: 0;
+}
+
 @media(max-width: 500px) {
   .login-card {
     width: 100%;
+  }
+  .about {
+    width: 278px;
+    margin: 0 0 1rem 0;
   }
 }

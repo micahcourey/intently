@@ -10,7 +10,7 @@ import { SignupPageComponent } from './signup-page/signup-page.component'
 import { HomePageComponent } from './home-page/home-page.component'
 
 const appRoutes: Routes = [
-  { path: '', component: LoginPageComponent, canActivate: [AuthGuard] },
+  { path: '', component: SignupPageComponent, canActivate: [AuthGuard] },
   { path: 'login', component: LoginPageComponent, canActivate: [AuthGuard] },
   { path: 'signup', component: SignupPageComponent, canActivate: [AuthGuard] },
   { path: 'home', component: HomePageComponent, resolve: { data: UserResolver} },
