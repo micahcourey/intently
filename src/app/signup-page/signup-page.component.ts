@@ -43,4 +43,8 @@ export class SignupPageComponent implements OnInit {
     })
   }
 
+  scrollTop() {
+    window.scrollTo(0, 0);
+  }
+
 }

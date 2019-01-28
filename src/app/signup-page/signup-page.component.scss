@@ -68,17 +68,28 @@ main {
 .about-item {
   margin-bottom: 2.4rem;
 }
-.about-item > h2 {
+.about-item > h2, .cta > h2 {
   font-size: 1.7rem;
   margin-top: 0;
   margin-bottom: 1rem;
 }
-.about-item > p {
+.about-item > p, .cta > p {
   font-size: 1.1rem;
   line-height: 1.5;
   margin: 0;
 }
-
+.cta {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 1rem 0 4rem 0;
+}
+.cta > button {
+  margin-top: 2rem;
+  padding: 1rem;
+  color: #fff;
+  font-size: 1.2rem;
+}
 @media(max-width: 500px) {
   .login-card {
     width: 100%;
