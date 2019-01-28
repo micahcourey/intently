@@ -5,6 +5,7 @@ main {
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
+  background-color: #fff;
 }
 .login-card {
   margin-top: 4rem;
@@ -38,6 +39,7 @@ main {
 }
 @media(max-width: 500px) {
   .login-card {
-    width: 100%;
+    width: calc(100% - 2rem);
+    margin: 1rem;
   }
 }

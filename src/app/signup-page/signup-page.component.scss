@@ -50,7 +50,7 @@ main {
 }
 .crop-box {
   display: inline-block;
-  height: 602px;
+  height: 601px;
   width: 300px;
   overflow: hidden;
 }
@@ -59,7 +59,7 @@ main {
 }
 .about {
   margin-right: 2rem;
-  max-width: 500px;
+  max-width: 450px;
 }
 .about:nth-child(even) {
   margin-left: 2rem;
@@ -90,7 +90,7 @@ main {
   color: #fff;
   font-size: 1.2rem;
 }
-@media(max-width: 500px) {
+@media(max-width: 800px) {
   .login-card {
     width: calc(100% - 2rem);
     margin: 1rem;
@@ -103,11 +103,26 @@ main {
     flex-direction: column-reverse;
   }
   .about {
-    width: 278px;
+    width: 400px;
     margin: 1rem 0 !important;
   }
   .about > .about-item:last-child {
     margin-bottom: 1rem;
+  }
+  .crop-box {
+    margin-bottom: 1rem;
+  }
+  .cta {
+    text-align: center;
+    width: 400px;
+    border: 1px solid #d3d3d3;
+    padding: 1rem;
+  }
+}
+@media(max-width: 500px) {
+  .about {
+    width: 278px;
+    margin: 1rem 0 !important;
   }
   .cta {
     text-align: center;

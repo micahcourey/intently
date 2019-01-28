@@ -33,7 +33,7 @@ export class SignupPageComponent implements OnInit {
     this.authService.doRegister(this.signupForm.value)
     .then(res => {
       this.errorMessage = "";
-      this.successMessage = "Your account has been created";
+      this.successMessage = "Your account has been successfully created";
       this.router.navigate(['/home']);
 
     }, err => {
