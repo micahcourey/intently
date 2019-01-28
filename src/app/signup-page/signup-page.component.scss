@@ -92,10 +92,27 @@ main {
 }
 @media(max-width: 500px) {
   .login-card {
-    width: 100%;
+    width: calc(100% - 2rem);
+    margin: 1rem;
+  }
+  .promo {
+    flex-direction: column;
+    margin: 1rem 0;
+  }
+  .promo:nth-child(even) {
+    flex-direction: column-reverse;
   }
   .about {
     width: 278px;
-    margin: 0 0 1rem 0;
+    margin: 1rem 0 !important;
+  }
+  .about > .about-item:last-child {
+    margin-bottom: 1rem;
+  }
+  .cta {
+    text-align: center;
+    width: 278px;
+    border: 1px solid #d3d3d3;
+    padding: 1rem;
   }
 }
