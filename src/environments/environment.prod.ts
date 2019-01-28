@@ -1,4 +1,11 @@
 export const environment = {
-  production: true,
-  apiUrl: 'http://localhost:3000/api/'
+  production: false,
+  firebase: {
+    apiKey: "AIzaSyAGo7dcdPV-Di734ofhDrXgS-8DKuDa4ow",
+    authDomain: "daily-matrix.firebaseapp.com",
+    databaseURL: "https://daily-matrix.firebaseio.com",
+    projectId: "daily-matrix",
+    storageBucket: "daily-matrix.appspot.com",
+    messagingSenderId: "655738296731"
+  }
 };
