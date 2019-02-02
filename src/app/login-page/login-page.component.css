@@ -37,6 +37,10 @@ main {
   color: #fff;
   text-decoration: none;
 }
+.reset-password-btn {
+  text-align: end;
+  padding: 0;
+}
 @media(max-width: 500px) {
   .login-card {
     width: calc(100% - 2rem);

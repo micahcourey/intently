@@ -1,7 +1,6 @@
 import { Component, OnChanges, Input, Inject, Output, EventEmitter } from '@angular/core';
-import {MatDialog, MatDialogRef, MAT_DIALOG_DATA} from '@angular/material'
+import {MatDialog, MatDialogRef, MAT_DIALOG_DATA, MatSnackBar} from '@angular/material'
 import { FormGroup, FormControl } from '@angular/forms'
-import {MatSnackBar} from '@angular/material';
 import { SubscriptionLike as ISubscription } from 'rxjs'
 import { UserService } from '../../services/user.service'
 import * as moment from 'moment'

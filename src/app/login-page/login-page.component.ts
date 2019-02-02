@@ -45,25 +45,27 @@ export class LoginPageComponent implements OnInit {
     })
   }
 
-  resetPassword(newPassword) {
-
+  resetPassword(email) {
+    console.log(email)
+    this.authService.sendResetPassword(email).then(() => {
+      console.log('email sent')
+    })
   }
-  
-  openDialog(data): void {
-    let userData = {
-      newPassword: ''
+
+  openResetPasswordDialog(): void {
+    let data = {
+      email: this.loginForm.get('email').value, 
     }
     const dialogRef = this.dialog.open(ResetPasswordDialogComponent, {
       width: '350px',
-      data: userData,
-      disableClose: true
+      data: data
     });
 
     dialogRef.afterClosed().subscribe(result => {
       if (result === false) {
         return
       }
-      this.resetPassword(result)
+      this.resetPassword(result.email)
     });
   }
 

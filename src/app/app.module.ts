@@ -64,7 +64,7 @@ const routes: Routes = [ ];
     GoalDialogComponent,
     ResetPasswordDialogComponent,
     MonthlyViewerComponent,
-    SignupPageComponent
+    SignupPageComponent,
   ],
   imports: [
     BrowserModule,

@@ -23,9 +23,9 @@
                 <input formControlName="password" type="password" matInput placeholder="Password">
               </mat-form-field>
               <button mat-raised-button color="primary" (click)="tryLogin()">Login</button>
+              <button mat-button (click)="openResetPasswordDialog()" class="reset-password-btn" color="accent">Forgot password?</button>
             </form>
           </div>
-          <p>Don't have an account? <a routerLink="/signup">Sign up</a></p>
       </div>
     </mat-card>
   </div>

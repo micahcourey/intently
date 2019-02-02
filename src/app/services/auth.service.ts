@@ -52,4 +52,17 @@ export class AuthService {
     });
   }
 
+  sendResetPassword(emailAddress) {
+    return new Promise((resolve, reject) => {
+      firebase.auth().sendPasswordResetEmail(emailAddress).then(() => {
+        console.log('Email sent.')
+        resolve()
+      }).catch(function(error) {
+        console.log('An error happened.', error)
+      });
+    });
+  }
+
+
+
 }
