@@ -23,6 +23,7 @@
             "tsConfig": "src/tsconfig.app.json",
             "assets": [
               "src/favicon.png",
+              "src/robots.txt",
               "src/assets",
               "src/_redirects",
               "src/manifest.webmanifest"
