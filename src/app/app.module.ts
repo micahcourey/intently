@@ -51,7 +51,8 @@ import { ActivityEditorComponent } from './home-page/activity-editor/activity-ed
 import { GoalTrackerComponent, GoalDialogComponent } from './home-page/goal-tracker/goal-tracker.component';
 import { MonthlyViewerComponent } from './home-page/monthly-viewer/monthly-viewer.component';
 import { SignupPageComponent } from './signup-page/signup-page.component';
-import { ResetPasswordComponent } from './reset-password/reset-password.component'
+import { ResetPasswordComponent } from './reset-password/reset-password.component';
+import { ServiceWorkerModule } from '@angular/service-worker'
 
 const routes: Routes = [ ];
 
@@ -97,7 +98,8 @@ const routes: Routes = [ ];
     MatExpansionModule,
     MatDialogModule,
     MatSelectModule,
-    MatTableModule
+    MatTableModule,
+    ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production })
   ],
   providers: [
     UserService,

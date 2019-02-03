@@ -396,6 +396,9 @@ Apache-2.0
 
 @angular/material/core
 
+@angular/service-worker
+MIT
+
 @angular/material/expansion
 
 @angular/fire/auth
