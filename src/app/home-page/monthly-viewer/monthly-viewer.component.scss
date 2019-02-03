@@ -10,7 +10,7 @@
   height: 40px;
 }
 .date-picker {
-  width: 116px;
+  width: 150px;
 }
 .matrix-header > h1 {
   padding: 0;
@@ -36,4 +36,52 @@ td {
   height: 200px;
   border: 1px solid #d3d3d3;
 }
+.date-input {
+  display: none;
+}
+.mobile-label {
+  display: none;
+}
 
+@media(max-width: 600px) {
+  .matrix-header {
+    height: 72px;
+    justify-content: center;
+  }
+
+  .mat-table {
+    table-layout: fixed;
+  }
+  // Remove the header row altogether
+  .mat-header-row {
+    display: none;
+  }
+
+  // The row cells should display as a column, justified left, with a bit of extra padding
+  .mat-row { 
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    margin-bottom: 8px;
+    padding-bottom: 4px;
+    border-bottom: 0.8px solid rgba(0, 0, 0, 0.12);
+  }
+  .mat-row:first-child {
+    padding-top: 8px;
+  }
+  .mat-row > td:first-child {
+    padding: 0 8px;
+    font-weight: bold;
+    margin-bottom: 8px;
+    border-bottom-style: none;    
+  }
+  .mat-row > td:last-child {
+    padding: 0 8px;
+    border-bottom-style: none;
+    word-wrap: break-word;
+    white-space: normal;
+  }
+
+
+}

@@ -21,6 +21,7 @@ export class MonthlyViewerComponent implements OnInit {
   dateSub: ISubscription
   dayArray: Array<any>
   currentMonth: string;
+  currentYear: string;
   
   constructor() { 
     this.selectedDate = new FormControl(new Date());
@@ -37,7 +38,8 @@ export class MonthlyViewerComponent implements OnInit {
 
   getMonth(month: number, year: number) {
     let days = []
-    let daysInMonth = moment(month).daysInMonth()
+    let daysInMonth = moment(`${year}-${month + 1}`, "YYYY-MM").daysInMonth()
+    console.log(month, daysInMonth)
     this.dayArray = []
     let i = 1
     while(daysInMonth) {
@@ -54,6 +56,7 @@ export class MonthlyViewerComponent implements OnInit {
   setMatrix(date) { 
     const matrix = []
     this.currentMonth = moment(date).format('MMMM') 
+    this.currentYear = moment(date).format('YYYY') 
     this.dayArray.forEach((day) => {
       const userTasks: Array<Task> = this.tasks.filter(task => task.userId === this.user.uid)
       matrix.push({

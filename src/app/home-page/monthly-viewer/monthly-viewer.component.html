@@ -1,10 +1,11 @@
 <div class="matrix-container">
   <div class="matrix-header">
-    <h1>Your Intentions for {{this.currentMonth}}</h1>
+    <h1>Your Intentions for {{currentMonth}}</h1>
     <mat-form-field class="date-picker">
-      <input matInput [matDatepicker]="picker" [formControl]="selectedDate">
+      <input matInput class="date-input" [matDatepicker]="picker" [formControl]="selectedDate">
+      <span>{{currentMonth}}, {{currentYear}}</span>
       <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
-      <mat-datepicker #picker startView="year"
+      <mat-datepicker #picker startView="year" 
         (monthSelected)="chosenMonthHandler($event); picker.close()">
       </mat-datepicker>
     </mat-form-field>
@@ -16,7 +17,7 @@
       <th mat-header-cell *matHeaderCellDef>Day</th>
       <td mat-cell class="name-col" *matCellDef="let day">{{day.date}}</td>
     </ng-container>
-  
+
     <ng-container matColumnDef="task">
       <th mat-header-cell *matHeaderCellDef>Intentions</th>
       <td mat-cell *matCellDef="let day">{{day.task}}</td>
