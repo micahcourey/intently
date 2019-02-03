@@ -63,6 +63,14 @@ export class AuthService {
     });
   }
 
-
+  handleResetPassword(newPassword, code) {
+    return new Promise((resolve, reject) => {
+      firebase.auth().confirmPasswordReset(code, newPassword).then(resp => {
+        alert('New password has been saved');
+      }).catch(e => {
+        alert(e);
+      });
+    })
+  }
 
 }

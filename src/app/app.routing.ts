@@ -8,11 +8,13 @@ import { UserResolver } from './home-page/user.resolver';
 import { LoginPageComponent } from './login-page/login-page.component'
 import { SignupPageComponent } from './signup-page/signup-page.component'
 import { HomePageComponent } from './home-page/home-page.component'
+import { ResetPasswordComponent } from './reset-password/reset-password.component';
 
 const appRoutes: Routes = [
   { path: '', component: SignupPageComponent, canActivate: [AuthGuard] },
   { path: 'login', component: LoginPageComponent, canActivate: [AuthGuard] },
   { path: 'signup', component: SignupPageComponent, canActivate: [AuthGuard] },
+  { path: 'reset-password', component: ResetPasswordComponent },
   { path: 'home', component: HomePageComponent, resolve: { data: UserResolver} },
 ];
 

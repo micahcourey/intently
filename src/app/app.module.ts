@@ -50,7 +50,8 @@ import { HomePageComponent } from './home-page/home-page.component';
 import { ActivityEditorComponent } from './home-page/activity-editor/activity-editor.component';
 import { GoalTrackerComponent, GoalDialogComponent } from './home-page/goal-tracker/goal-tracker.component';
 import { MonthlyViewerComponent } from './home-page/monthly-viewer/monthly-viewer.component';
-import { SignupPageComponent } from './signup-page/signup-page.component'
+import { SignupPageComponent } from './signup-page/signup-page.component';
+import { ResetPasswordComponent } from './reset-password/reset-password.component'
 
 const routes: Routes = [ ];
 
@@ -65,6 +66,7 @@ const routes: Routes = [ ];
     ResetPasswordDialogComponent,
     MonthlyViewerComponent,
     SignupPageComponent,
+    ResetPasswordComponent,
   ],
   imports: [
     BrowserModule,
