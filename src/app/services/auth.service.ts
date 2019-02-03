@@ -55,7 +55,6 @@ export class AuthService {
   sendResetPassword(emailAddress) {
     return new Promise((resolve, reject) => {
       firebase.auth().sendPasswordResetEmail(emailAddress).then(() => {
-        console.log('Email sent.')
         resolve()
       }).catch(function(error) {
         console.log('An error happened.', error)
@@ -66,7 +65,7 @@ export class AuthService {
   handleResetPassword(newPassword, code) {
     return new Promise((resolve, reject) => {
       firebase.auth().confirmPasswordReset(code, newPassword).then(resp => {
-        alert('New password has been saved');
+        resolve();
       }).catch(e => {
         alert(e);
       });

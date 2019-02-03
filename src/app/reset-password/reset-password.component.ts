@@ -24,14 +24,13 @@ export class ResetPasswordComponent implements OnInit {
   }
 
   ngOnInit() {
-    console.log('token', this.resetToken)
+
   }
 
   doResetPassword() {
     const password = this.passwordForm.get('password').value
 
     this.authService.handleResetPassword(password, this.resetToken).then(resp => {
-      this.router.navigate(['/']);
       this.isReset = true;
     }).catch(e => {
       this.isError = true;

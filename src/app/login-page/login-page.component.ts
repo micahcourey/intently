@@ -54,7 +54,7 @@ export class LoginPageComponent implements OnInit {
 
   openResetPasswordDialog(): void {
     let data = {
-      email: this.loginForm.get('email').value, 
+      email: this.loginForm.get('email').value
     }
     const dialogRef = this.dialog.open(ResetPasswordDialogComponent, {
       width: '350px',
